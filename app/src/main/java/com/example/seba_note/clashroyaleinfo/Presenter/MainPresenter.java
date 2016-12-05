@@ -4,7 +4,7 @@ import android.util.Log;
 
 import com.example.seba_note.clashroyaleinfo.App;
 import com.example.seba_note.clashroyaleinfo.Model.Card;
-import com.example.seba_note.clashroyaleinfo.View.MainActivity;
+import com.example.seba_note.clashroyaleinfo.View.Iview;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class MainPresenter implements Ipresenter{
 
     private List<Card> mcards = new ArrayList<>();
     private Throwable error;
-    private MainActivity view;
+    private Iview view;
 
     public MainPresenter() {
         App.getServerAPI()
@@ -44,7 +44,7 @@ public class MainPresenter implements Ipresenter{
     }
 
     @Override
-    public void onTakeView(MainActivity view) {
+    public void onTakeView(Iview view) {
         this.view = view;
         publish();
     }

@@ -7,16 +7,17 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.example.seba_note.clashroyaleinfo.Model.Card;
+import com.example.seba_note.clashroyaleinfo.Presenter.Ipresenter;
 import com.example.seba_note.clashroyaleinfo.Presenter.MainPresenter;
 import com.example.seba_note.clashroyaleinfo.R;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Iview {
 
     private MyAdapter adapter;
 
-    private static MainPresenter presenter;
+    private static Ipresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,13 +41,16 @@ public class MainActivity extends AppCompatActivity {
             presenter = null;
     }
 
+    @Override
     public void onItemsNext(List<Card> cards) {
         adapter.clear();
         adapter.addAll(cards);
         adapter.notifyDataSetChanged();
     }
 
+    @Override
     public void onItemsError(Throwable throwable) {
         Toast.makeText(this, throwable.getMessage(), Toast.LENGTH_LONG).show();
+
     }
 }

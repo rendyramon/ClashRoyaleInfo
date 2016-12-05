@@ -1,5 +1,6 @@
 package com.example.seba_note.clashroyaleinfo.Presenter;
 
+import com.example.seba_note.clashroyaleinfo.View.Iview;
 import com.example.seba_note.clashroyaleinfo.View.MainActivity;
 
 /**
@@ -8,7 +9,7 @@ import com.example.seba_note.clashroyaleinfo.View.MainActivity;
 
 public interface Ipresenter {
 
-    void onTakeView (MainActivity mainActivity);
+    void onTakeView (Iview mainActivity);
     void publish();
 
 }
