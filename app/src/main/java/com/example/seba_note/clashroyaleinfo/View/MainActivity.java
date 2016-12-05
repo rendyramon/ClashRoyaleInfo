@@ -1,56 +1,36 @@
 package com.example.seba_note.clashroyaleinfo.View;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
-
-import com.example.seba_note.clashroyaleinfo.Model.Card;
-import com.example.seba_note.clashroyaleinfo.Presenter.Ipresenter;
-import com.example.seba_note.clashroyaleinfo.Presenter.MainPresenter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.FrameLayout;
+import android.widget.ListView;
 import com.example.seba_note.clashroyaleinfo.R;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-import java.util.List;
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity implements Iview {
-
-    private MyAdapter adapter;
-
-    private static Ipresenter presenter;
+    @BindView(R.id.content_frame)
+    FrameLayout contentFrame;
+    @BindView(R.id.left_drawer)
+    ListView leftDrawer;
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        adapter = new MyAdapter(this);
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        if (presenter == null)
-            presenter = new MainPresenter();
-        presenter.onTakeView(this);
+        setContentView(R.layout.main_activity);
+        ButterKnife.bind(this);
+        setFirstFragment();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        presenter.onTakeView(null);
-        if (isFinishing())
-            presenter = null;
+    private void setFirstFragment() {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.content_frame,new CardFragment(),CardFragment.class.getName());
+        ft.commit();
     }
 
-    @Override
-    public void onItemsNext(List<Card> cards) {
-        adapter.clear();
-        adapter.addAll(cards);
-        adapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onItemsError(Throwable throwable) {
-        Toast.makeText(this, throwable.getMessage(), Toast.LENGTH_LONG).show();
-
-    }
 }

@@ -12,13 +12,13 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MainPresenter implements Ipresenter{
+public class CardPresenter implements Ipresenter{
 
     private List<Card> mcards = new ArrayList<>();
     private Throwable error;
     private Iview view;
 
-    public MainPresenter() {
+    public CardPresenter() {
         App.getServerAPI()
             .getCards("cards")
             .subscribeOn(Schedulers.io())
