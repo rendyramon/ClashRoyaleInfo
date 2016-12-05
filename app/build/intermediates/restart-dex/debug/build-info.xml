@@ -5,40 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="41521701787683"
+    timestamp="88969041362947"
     token="-1055347200992714686"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="177" />
+        duration="1749" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="18" />
+        duration="630" />
     <task
         name="verifier"
-        duration="1" />
+        duration="186" />
 
     <artifact
-        location="C:\Users\seba-note\Desktop\Workspace\ClashRoyaleInfo\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
-        type="DEX" />
+        location="C:\Users\seba-note\Desktop\Workspace\ClashRoyaleInfo\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="41314252059506"
+        timestamp="88969041362947"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\seba-note\Desktop\Workspace\ClashRoyaleInfo\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="41521701787683"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\seba-note\Desktop\Workspace\ClashRoyaleInfo\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

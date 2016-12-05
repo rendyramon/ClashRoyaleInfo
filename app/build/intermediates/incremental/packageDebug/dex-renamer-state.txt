@@ -1,4 +1,4 @@
-#Sat Dec 03 03:28:44 ART 2016
+#Mon Dec 05 11:26:44 ART 2016
 base.0=C\:\\Users\\seba-note\\Desktop\\Workspace\\ClashRoyaleInfo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d9ffb650c4a959753a101cdd7fe6166c6e4443de
 renamed.1=classes2.dex
 renamed.0=classes.dex
