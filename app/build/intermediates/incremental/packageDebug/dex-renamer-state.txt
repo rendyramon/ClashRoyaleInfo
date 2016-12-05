@@ -1,7 +1,0 @@
-#Mon Dec 05 11:26:44 ART 2016
-base.0=C\:\\Users\\seba-note\\Desktop\\Workspace\\ClashRoyaleInfo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d9ffb650c4a959753a101cdd7fe6166c6e4443de
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\seba-note\\Desktop\\Workspace\\ClashRoyaleInfo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_97cb895be3a0e9ab7b4a0e7eaf37060494356cb7\\classes.dex
-base.1=C\:\\Users\\seba-note\\Desktop\\Workspace\\ClashRoyaleInfo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_97cb895be3a0e9ab7b4a0e7eaf37060494356cb7
-file.0=C\:\\Users\\seba-note\\Desktop\\Workspace\\ClashRoyaleInfo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d9ffb650c4a959753a101cdd7fe6166c6e4443de\\classes.dex
