@@ -5,7 +5,6 @@ import android.util.Log;
 import com.example.seba_note.clashroyaleinfo.App;
 import com.example.seba_note.clashroyaleinfo.Model.Card;
 import com.example.seba_note.clashroyaleinfo.View.Iview;
-
 import java.util.ArrayList;
 import java.util.List;
 
