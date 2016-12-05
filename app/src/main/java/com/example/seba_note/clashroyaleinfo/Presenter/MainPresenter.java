@@ -13,7 +13,7 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MainPresenter {
+public class MainPresenter implements Ipresenter{
 
     private List<Card> mcards = new ArrayList<>();
     private Throwable error;
@@ -43,12 +43,14 @@ public class MainPresenter {
             });
     }
 
+    @Override
     public void onTakeView(MainActivity view) {
         this.view = view;
         publish();
     }
 
-    private void publish() {
+    @Override
+    public void publish() {
         if (view != null) {
             if (mcards != null)
                 view.onItemsNext(mcards);
@@ -56,4 +58,5 @@ public class MainPresenter {
                 view.onItemsError(error);
         }
     }
+
 }
